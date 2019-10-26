@@ -26,15 +26,15 @@ module SevenSeg(
                 8'd7: value = 8'b11111000;
                 8'd8: value = 8'b10000000;
                 8'd9: value = 8'b10011000;
-                8'd10: value = 8'b10001000; 
-                8'd11: value = 8'b10000011;
-                8'd12: value = 8'b11000110;
-                8'd13: value = 8'b10100001;
-                8'd14: value = 8'b10000110;
-                8'd15: value = 8'b10001110;
+                // 8'd10: value = 8'b10001000; 
+                // 8'd11: value = 8'b10000011;
+                // 8'd12: value = 8'b11000110;
+                // 8'd13: value = 8'b10100001;
+                // 8'd14: value = 8'b10000110;
+                // 8'd15: value = 8'b10001110;
  
                 8'd88: value = 8'b11111111;
-                8'd99: value = 8'b10111111;
+                // 8'd99: value = 8'b10111111;
             endcase
         end
  

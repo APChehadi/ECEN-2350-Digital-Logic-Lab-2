@@ -1,8 +1,9 @@
 module Counters(
     input                       clk,
+    input                       reset_n,
  
-    output           [7:0]      H4,
-    output           [7:0]      H5,
+    output           [7:0]      HEX4,
+    output           [7:0]      HEX5,
  
     //////////// KEY //////////
     input            [1:0]      KEY,
@@ -14,86 +15,35 @@ module Counters(
     input            [9:0]      SW
 );
  
-reg [7:0] cntr1;
-reg [7:0] cntr1_9;
-reg [7:0] cntr1_99;
-reg [7:0] cntr2;
-reg [7:0] cntr2_9;
+reg [7:0] counter_tens_p;
+reg [7:0] counter_ones_p;
  
 always @(posedge clk, negedge reset_n)
     begin
         if(reset_n == 0)
             begin
-                cntr1 <= 8'd1;
-                cntr1_9 <= 8'd1;
-                cntr1_99 <= 8'd1;
+                counter_tens_p <= 8'd88;
+                counter_ones_p <= 8'd1;
             end
-        else if(cntr1 != 9)
+        else
             begin
-                cntr1 <= cntr1 + 1;
-                cntr1_99 <= cntr1_99 + 1;
-            end
-        else if(cntr1 == 9)
-            begin
-                if(cntr1_9 != 9)
-                begin
-                    cntr1_9 <= cntr1_9 + 1;
-                    cntr1 <= cntr1;
-                    cntr1_99 <= cntr1_99 + 1;
-                end
-                else if(cntr1_9 == 9)
+                if(counter_ones_p != 8'd9)
+                    counter_ones_p <= counter_ones_p + 1;
+                else if(counter_ones_p == 8'd9)
                     begin
-                        if(cntr1_99 != 99)
-                        begin
-                            cntr1 <= 8'd0;
-                            cntr1_9 <= 8'd0;
-                            cntr1_99 <= cntr1_99 + 1;
-                        end
-                        else if(cntr1_99 == 99)
-                        begin
-                            cntr1 <= 8'd1;
-                            cntr1_9 <= 8'd1;
-                            cntr1_99 <= 8'd1;
-                        end
+                        if(counter_tens_p == 8'd88)
+                            counter_tens_p <= 8'd1;
+                        else if(counter_tens_p == 8'd9)
+                            counter_tens_p <= 8'd88;
+                        else
+                            counter_tens_p <= counter_tens_p + 1;
+                        counter_ones_p <= 8'd0;
                     end
             end
     end
  
-    SevenSeg W0(.H(H4), .NUM(cntr1));
- 
-always @(posedge clk, negedge reset_n)
-    begin
-        if(reset_n == 0)
-            begin
-                cntr2 <= 8'd88;
-                cntr2_9 <= 8'd1;
-            end
-        else if(cntr2 != 9)
-            begin
-                if(cntr2_9 != 9)
-                    begin
-                        cntr2 <= cntr2;
-                        cntr2_9 <= cntr2_9 + 1;
-                    end
-                else if(cntr2_9 == 9)
-                    begin
-                        cntr2 <= cntr2 + 1;
-                        cntr2_9 <= 8'd1;
-                    end
-            end
-        else if(cntr2 == 9)
-            begin
-                if(cntr2_9 != 9)
-                    begin
-                        cntr2 <= cntr2;
-                        cntr2_9 <= cntr2_9 + 1;
-                    end
-                else if(cntr2_9 == 9)
-                    begin
-                        cntr2 <= 8'd88;
-                        cntr2_9 <= 8'd1;
-                    end
-            end
-    end
- 
-    SevenSeg W1(.H(H5), .NUM(cntr2));
+    SevenSeg W0(.HEX(HEX5), .NUM(counter_tens_p)); 
+    SevenSeg W1(.HEX(HEX4), .NUM(counter_ones_p));
+
+
+endmodule

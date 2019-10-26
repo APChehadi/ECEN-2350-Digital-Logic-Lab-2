@@ -27,17 +27,23 @@ module Lab2(
     input            [9:0]      SW
 );
  
-reg [23:0] s_clk; //calculate correct size
+wire s_clk; //calculate correct size
+reg latch_out = 1'b0;
+wire latch; 
+
+always @(negedge KEY[0])
+	begin
+    	latch_out <= ~latch_out;
+	end
  
-always @(negedge  pushbutton_in)
-    latch_out <= ~latch_out;
- 
+assign latch = latch_out;
+// assign LEDR[0] = ~latch_out;
     
-clock_divider #(1_000_000) U0(.clk(ADC_CLK_10), .slower_clk(s_clk));
+clock_divider #(1_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
  
-assign LEDR[1] = s_clk;
+// assign LEDR[1] = s_clk;
  
-counters U1(.clk(s_clk), .H4(HEX4), .H5(HEX5), .SW(SW), .KEY(KEY), .LEDR(LEDR));
+Counters U1(.clk(s_clk), .reset_n(latch), .HEX4(HEX4), .HEX5(HEX5), .KEY(KEY), .LEDR(LEDR), .SW(SW));
  
  
  

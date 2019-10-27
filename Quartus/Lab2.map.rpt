@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab2
-Sat Oct 26 17:09:24 2019
+Sun Oct 27 14:42:33 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -18,9 +18,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: clock_divider:U0
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 13. Port Connectivity Checks: "Counters:U1|month_day:MD0|SevenSeg:SS2"
+ 14. Port Connectivity Checks: "Counters:U1|month_day:MD0|SevenSeg:SS3"
+ 15. Port Connectivity Checks: "Counters:U1"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +49,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 26 17:09:24 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 27 14:42:33 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab2                                        ;
 ; Top-level Entity Name              ; Lab2                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 127                                         ;
-;     Total combinational functions  ; 127                                         ;
+; Total logic elements               ; 191                                         ;
+;     Total combinational functions  ; 191                                         ;
 ;     Dedicated logic registers      ; 42                                          ;
 ; Total registers                    ; 42                                          ;
 ; Total pins                         ; 73                                          ;
@@ -173,6 +176,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                         ; Library ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; ../Source/month_day.v            ; yes             ; User Verilog HDL File  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v     ;         ;
 ; ../Source/SevenSeg.v             ; yes             ; User Verilog HDL File  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v      ;         ;
 ; ../Source/Lab2.v                 ; yes             ; User Verilog HDL File  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v          ;         ;
 ; ../Source/Counters.v             ; yes             ; User Verilog HDL File  ; C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v      ;         ;
@@ -185,16 +189,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 127       ;
+; Estimated Total logic elements              ; 191       ;
 ;                                             ;           ;
-; Total combinational functions               ; 127       ;
+; Total combinational functions               ; 191       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 42        ;
-;     -- 3 input functions                    ; 19        ;
-;     -- <=2 input functions                  ; 66        ;
+;     -- 4 input functions                    ; 74        ;
+;     -- 3 input functions                    ; 52        ;
+;     -- <=2 input functions                  ; 65        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 90        ;
+;     -- normal mode                          ; 154       ;
 ;     -- arithmetic mode                      ; 37        ;
 ;                                             ;           ;
 ; Total registers                             ; 42        ;
@@ -207,46 +211,79 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; latch_out ;
 ; Maximum fan-out                             ; 42        ;
-; Total fan-out                               ; 571       ;
-; Average fan-out                             ; 1.81      ;
+; Total fan-out                               ; 811       ;
+; Average fan-out                             ; 2.14      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name           ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------+---------------+--------------+
-; |Lab2                      ; 127 (1)             ; 42 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 73   ; 0            ; 0          ; |Lab2                         ; Lab2          ; work         ;
-;    |Counters:U1|           ; 86 (37)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|Counters:U1             ; Counters      ; work         ;
-;       |SevenSeg:W0|        ; 25 (25)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|Counters:U1|SevenSeg:W0 ; SevenSeg      ; work         ;
-;       |SevenSeg:W1|        ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|Counters:U1|SevenSeg:W1 ; SevenSeg      ; work         ;
-;    |clock_divider:U0|      ; 40 (40)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|clock_divider:U0        ; clock_divider ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------+---------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                          ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+---------------+--------------+
+; |Lab2                      ; 191 (1)             ; 42 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 73   ; 0            ; 0          ; |Lab2                                        ; Lab2          ; work         ;
+;    |Counters:U1|           ; 150 (32)            ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|Counters:U1                            ; Counters      ; work         ;
+;       |SevenSeg:W0|        ; 25 (25)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|Counters:U1|SevenSeg:W0                ; SevenSeg      ; work         ;
+;       |SevenSeg:W1|        ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|Counters:U1|SevenSeg:W1                ; SevenSeg      ; work         ;
+;       |month_day:MD0|      ; 69 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|Counters:U1|month_day:MD0              ; month_day     ; work         ;
+;          |SevenSeg:SS0|    ; 25 (25)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|Counters:U1|month_day:MD0|SevenSeg:SS0 ; SevenSeg      ; work         ;
+;          |SevenSeg:SS1|    ; 25 (25)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|Counters:U1|month_day:MD0|SevenSeg:SS1 ; SevenSeg      ; work         ;
+;    |clock_divider:U0|      ; 40 (40)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab2|clock_divider:U0                       ; clock_divider ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                            ;
-+-----------------------------------------------------+---------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal             ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------------------+------------------------+
-; Counters:U1|SevenSeg:W1|value[0]                    ; Counters:U1|SevenSeg:W1|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W1|value[1]                    ; Counters:U1|SevenSeg:W1|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W1|value[2]                    ; Counters:U1|SevenSeg:W1|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W1|value[3]                    ; Counters:U1|SevenSeg:W1|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W1|value[4]                    ; Counters:U1|SevenSeg:W1|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W1|value[5]                    ; Counters:U1|SevenSeg:W1|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W1|value[6]                    ; Counters:U1|SevenSeg:W1|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W0|value[0]                    ; Counters:U1|SevenSeg:W0|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W0|value[1]                    ; Counters:U1|SevenSeg:W0|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W0|value[2]                    ; Counters:U1|SevenSeg:W0|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W0|value[3]                    ; Counters:U1|SevenSeg:W0|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W0|value[4]                    ; Counters:U1|SevenSeg:W0|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W0|value[5]                    ; Counters:U1|SevenSeg:W0|WideOr1 ; yes                    ;
-; Counters:U1|SevenSeg:W0|value[6]                    ; Counters:U1|SevenSeg:W0|WideOr1 ; yes                    ;
-; Number of user-specified and inferred latches = 14  ;                                 ;                        ;
-+-----------------------------------------------------+---------------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                           ;
++-----------------------------------------------------+------------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                            ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------------------+------------------------+
+; Counters:U1|month_day:MD0|SevenSeg:SS0|value[0]     ; Counters:U1|month_day:MD0|SevenSeg:SS0|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS0|value[1]     ; Counters:U1|month_day:MD0|SevenSeg:SS0|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS0|value[2]     ; Counters:U1|month_day:MD0|SevenSeg:SS0|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS0|value[3]     ; Counters:U1|month_day:MD0|SevenSeg:SS0|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS0|value[4]     ; Counters:U1|month_day:MD0|SevenSeg:SS0|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS0|value[5]     ; Counters:U1|month_day:MD0|SevenSeg:SS0|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS0|value[6]     ; Counters:U1|month_day:MD0|SevenSeg:SS0|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS1|value[0]     ; Counters:U1|month_day:MD0|SevenSeg:SS1|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS1|value[1]     ; Counters:U1|month_day:MD0|SevenSeg:SS1|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS1|value[2]     ; Counters:U1|month_day:MD0|SevenSeg:SS1|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS1|value[3]     ; Counters:U1|month_day:MD0|SevenSeg:SS1|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS1|value[4]     ; Counters:U1|month_day:MD0|SevenSeg:SS1|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS1|value[5]     ; Counters:U1|month_day:MD0|SevenSeg:SS1|WideOr1 ; yes                    ;
+; Counters:U1|month_day:MD0|SevenSeg:SS1|value[6]     ; Counters:U1|month_day:MD0|SevenSeg:SS1|WideOr1 ; yes                    ;
+; Counters:U1|SevenSeg:W1|value[0]                    ; Counters:U1|SevenSeg:W1|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W1|value[1]                    ; Counters:U1|SevenSeg:W1|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W1|value[2]                    ; Counters:U1|SevenSeg:W1|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W1|value[3]                    ; Counters:U1|SevenSeg:W1|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W1|value[4]                    ; Counters:U1|SevenSeg:W1|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W1|value[5]                    ; Counters:U1|SevenSeg:W1|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W1|value[6]                    ; Counters:U1|SevenSeg:W1|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W0|value[0]                    ; Counters:U1|SevenSeg:W0|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W0|value[1]                    ; Counters:U1|SevenSeg:W0|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W0|value[2]                    ; Counters:U1|SevenSeg:W0|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W0|value[3]                    ; Counters:U1|SevenSeg:W0|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W0|value[4]                    ; Counters:U1|SevenSeg:W0|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W0|value[5]                    ; Counters:U1|SevenSeg:W0|WideOr1                ; yes                    ;
+; Counters:U1|SevenSeg:W0|value[6]                    ; Counters:U1|SevenSeg:W0|WideOr1                ; yes                    ;
+; Counters:U1|month_day:MD0|day_ones_p[4]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_ones_p[5]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_ones_p[6]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_ones_p[7]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_ones_p[0]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_ones_p[1]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_ones_p[2]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_ones_p[3]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_tens_p[4]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_tens_p[5]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_tens_p[6]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_tens_p[7]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_tens_p[0]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_tens_p[1]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_tens_p[2]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Counters:U1|month_day:MD0|day_tens_p[3]             ; Counters:U1|month_day:MD0|always0              ; yes                    ;
+; Number of user-specified and inferred latches = 44  ;                                                ;                        ;
++-----------------------------------------------------+------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -270,10 +307,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; Counters:U1|counter_ones_p[0]          ; 11      ;
-; Counters:U1|counter_tens_p[3]          ; 12      ;
-; Counters:U1|counter_tens_p[6]          ; 5       ;
-; Counters:U1|counter_tens_p[4]          ; 4       ;
+; Counters:U1|counter_ones_p[0]          ; 12      ;
+; Counters:U1|counter_tens_p[3]          ; 13      ;
+; Counters:U1|counter_tens_p[6]          ; 6       ;
+; Counters:U1|counter_tens_p[4]          ; 5       ;
 ; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
 
@@ -298,6 +335,38 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "Counters:U1|month_day:MD0|SevenSeg:SS2" ;
++-----------+-------+----------+-------------------------------------+
+; Port      ; Type  ; Severity ; Details                             ;
++-----------+-------+----------+-------------------------------------+
+; NUM[7..1] ; Input ; Info     ; Stuck at GND                        ;
+; NUM[0]    ; Input ; Info     ; Stuck at VCC                        ;
++-----------+-------+----------+-------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "Counters:U1|month_day:MD0|SevenSeg:SS3" ;
++-----------+-------+----------+-------------------------------------+
+; Port      ; Type  ; Severity ; Details                             ;
++-----------+-------+----------+-------------------------------------+
+; NUM[4..3] ; Input ; Info     ; Stuck at VCC                        ;
+; NUM[2..0] ; Input ; Info     ; Stuck at GND                        ;
+; NUM[7]    ; Input ; Info     ; Stuck at GND                        ;
+; NUM[6]    ; Input ; Info     ; Stuck at VCC                        ;
+; NUM[5]    ; Input ; Info     ; Stuck at GND                        ;
++-----------+-------+----------+-------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Counters:U1"                                                                                             ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; LEDR ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -308,18 +377,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 32                          ;
 ;     ENA CLR           ; 8                           ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 129                         ;
+; cycloneiii_lcell_comb ; 193                         ;
 ;     arith             ; 37                          ;
 ;         2 data inputs ; 37                          ;
-;     normal            ; 92                          ;
+;     normal            ; 156                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 24                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 42                          ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 52                          ;
+;         4 data inputs ; 74                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.95                        ;
+; Average LUT depth     ; 2.96                        ;
 +-----------------------+-----------------------------+
 
 
@@ -328,7 +397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -338,10 +407,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Oct 26 17:09:13 2019
+    Info: Processing started: Sun Oct 27 14:42:17 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-digital-logic-lab-2/source/month_day.v
+    Info (12023): Found entity 1: month_day File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-digital-logic-lab-2/source/sevenseg.v
     Info (12023): Found entity 1: SevenSeg File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-digital-logic-lab-2/source/lab2.v
@@ -351,17 +422,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
 Info (12021): Found 1 design units, including 1 entities, in source file /users/adamp/documents/github/ecen-2350-digital-logic-lab-2/source/clock_divider.v
     Info (12023): Found entity 1: clock_divider File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/clock_divider.v Line: 1
 Info (12127): Elaborating entity "Lab2" for the top level hierarchy
-Warning (10034): Output port "HEX0" at Lab2.v(13) has no driver File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
-Warning (10034): Output port "HEX1" at Lab2.v(14) has no driver File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
-Warning (10034): Output port "HEX2" at Lab2.v(15) has no driver File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
-Warning (10034): Output port "HEX3" at Lab2.v(16) has no driver File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:U0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 42
+Warning (10034): Output port "LEDR[9..2]" at Lab2.v(24) has no driver File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 24
+Warning (10034): Output port "LEDR[0]" at Lab2.v(24) has no driver File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 24
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:U0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 41
 Warning (10230): Verilog HDL assignment warning at clock_divider.v(27): truncated value with size 32 to match size of target (24) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/clock_divider.v Line: 27
-Info (12128): Elaborating entity "Counters" for hierarchy "Counters:U1" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 46
-Warning (10230): Verilog HDL assignment warning at Counters.v(31): truncated value with size 32 to match size of target (8) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 31
-Warning (10230): Verilog HDL assignment warning at Counters.v(39): truncated value with size 32 to match size of target (8) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 39
-Warning (10034): Output port "LEDR" at Counters.v(12) has no driver File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 12
-Info (12128): Elaborating entity "SevenSeg" for hierarchy "Counters:U1|SevenSeg:W0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 45
+Info (12128): Elaborating entity "Counters" for hierarchy "Counters:U1" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 45
+Warning (10230): Verilog HDL assignment warning at Counters.v(36): truncated value with size 32 to match size of target (8) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 36
+Warning (10230): Verilog HDL assignment warning at Counters.v(44): truncated value with size 32 to match size of target (8) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 44
+Warning (10034): Output port "LEDR" at Counters.v(17) has no driver File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 17
+Info (12128): Elaborating entity "SevenSeg" for hierarchy "Counters:U1|SevenSeg:W0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 50
 Warning (10270): Verilog HDL Case Statement warning at SevenSeg.v(18): incomplete case statement has no default case item File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 18
 Warning (10240): Verilog HDL Always Construct warning at SevenSeg.v(16): inferring latch(es) for variable "value", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
 Info (10041): Inferred latch for "value[0]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
@@ -372,73 +441,131 @@ Info (10041): Inferred latch for "value[4]" at SevenSeg.v(16) File: C:/Users/ada
 Info (10041): Inferred latch for "value[5]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
 Info (10041): Inferred latch for "value[6]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
 Info (10041): Inferred latch for "value[7]" at SevenSeg.v(16) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+Info (12128): Elaborating entity "month_day" for hierarchy "Counters:U1|month_day:MD0" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 53
+Warning (10240): Verilog HDL Always Construct warning at month_day.v(17): inferring latch(es) for variable "month", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (10240): Verilog HDL Always Construct warning at month_day.v(17): inferring latch(es) for variable "day_tens_p", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (10240): Verilog HDL Always Construct warning at month_day.v(17): inferring latch(es) for variable "day_ones_p", which holds its previous value in one or more paths through the always construct File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_ones_p[0]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_ones_p[1]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_ones_p[2]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_ones_p[3]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_ones_p[4]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_ones_p[5]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_ones_p[6]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_ones_p[7]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_tens_p[0]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_tens_p[1]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_tens_p[2]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_tens_p[3]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_tens_p[4]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_tens_p[5]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_tens_p[6]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "day_tens_p[7]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "month[0]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "month[1]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "month[2]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "month[3]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "month[4]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "month[5]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "month[6]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Info (10041): Inferred latch for "month[7]" at month_day.v(17) File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS0|value[0] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_ones_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS0|value[1] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_ones_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS0|value[2] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_ones_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS0|value[3] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_ones_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS0|value[4] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_ones_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS0|value[5] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_ones_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS0|value[6] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_ones_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS1|value[0] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_tens_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS1|value[1] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_tens_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS1|value[2] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_tens_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS1|value[3] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_tens_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS1|value[4] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_tens_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS1|value[5] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_tens_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+Warning (13012): Latch Counters:U1|month_day:MD0|SevenSeg:SS1|value[6] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|month_day:MD0|day_tens_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
 Warning (13012): Latch Counters:U1|SevenSeg:W1|value[0] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W1|value[1] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W1|value[2] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W1|value[3] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W1|value[4] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W1|value[5] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W1|value[6] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_ones_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W0|value[0] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W0|value[1] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W0|value[2] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W0|value[3] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W0|value[4] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W0|value[5] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Warning (13012): Latch Counters:U1|SevenSeg:W0|value[6] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 16
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
-Info (13000): Registers with preset signals will power-up high File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
+Warning (13012): Latch Counters:U1|month_day:MD0|day_tens_p[4] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[4] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
+Warning (13012): Latch Counters:U1|month_day:MD0|day_tens_p[5] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[5] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
+Warning (13012): Latch Counters:U1|month_day:MD0|day_tens_p[6] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[6] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
+Warning (13012): Latch Counters:U1|month_day:MD0|day_tens_p[7] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[7] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
+Warning (13012): Latch Counters:U1|month_day:MD0|day_tens_p[0] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[0] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
+Warning (13012): Latch Counters:U1|month_day:MD0|day_tens_p[1] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[1] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
+Warning (13012): Latch Counters:U1|month_day:MD0|day_tens_p[2] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[2] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
+Warning (13012): Latch Counters:U1|month_day:MD0|day_tens_p[3] has unsafe behavior File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/month_day.v Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Counters:U1|counter_tens_p[3] File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
+Info (13000): Registers with preset signals will power-up high File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Counters.v Line: 35
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
-    Warning (13410): Pin "HEX0[7]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
-    Warning (13410): Pin "HEX1[7]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 13
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 14
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
     Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
     Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
-    Warning (13410): Pin "HEX2[7]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
-    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 15
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 16
     Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 17
     Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 18
     Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 24
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 24
     Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 24
     Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 24
     Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 24
@@ -464,14 +591,14 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 28
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 28
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 28
-Info (21057): Implemented 200 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 264 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 127 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 98 warnings
+    Info (21061): Implemented 191 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 129 warnings
     Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Sat Oct 26 17:09:24 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Processing ended: Sun Oct 27 14:42:33 2019
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:33
 
 

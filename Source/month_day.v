@@ -16,10 +16,6 @@ wire month_reset;
 assign month_reset = reset_n && (total_count != 31) && (total_count != 59) && (total_count != 90); 
 
 reg [7:0] disp_month;
-reg [7:0] disp_day_tens_p;
-reg [7:0] disp_day_ones_p;
-
-
 reg [7:0] counter_tens_p;
 reg [7:0] counter_ones_p;
  
@@ -63,33 +59,25 @@ always @(total_count)
         if(total_count <= 8'd31)
             begin
                 disp_month <= 8'd1;
-                disp_day_tens_p <= counter_tens_p;
-                disp_day_ones_p <= counter_ones_p;
             end
         else if(total_count <= 8'd59)
             begin
                 disp_month <= 8'd2;
-                disp_day_tens_p <= counter_tens_p;
-                disp_day_ones_p <= counter_ones_p;
             end
         else if(total_count <= 8'd90)
             begin
                 disp_month <= 8'd3;
-                disp_day_tens_p <= counter_tens_p;
-                disp_day_ones_p <= counter_ones_p;
             end
         else
             begin
                 disp_month <= 8'd4;
-                disp_day_tens_p <= counter_tens_p;
-                disp_day_ones_p <= counter_ones_p;
             end
     end
  
     SevenSeg SS3(.HEX(HEX3), .NUM(8'd88));
     SevenSeg SS2(.HEX(HEX2), .NUM(disp_month));
-    SevenSeg SS1(.HEX(HEX1), .NUM(disp_day_tens_p)); 
-    SevenSeg SS0(.HEX(HEX0), .NUM(disp_day_ones_p));
+    SevenSeg SS1(.HEX(HEX1), .NUM(counter_tens_p)); 
+    SevenSeg SS0(.HEX(HEX0), .NUM(counter_ones_p));
 
 
 endmodule

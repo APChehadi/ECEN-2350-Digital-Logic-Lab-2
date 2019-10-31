@@ -387,44 +387,6 @@ HEX3[6] <= SevenSeg:SS3.HEX
 HEX3[7] <= SevenSeg:SS3.HEX
 
 
-|Lab2|Counters:U1|month_day:MD0|SevenSeg:SS3
-HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
-HEX[7] <= <VCC>
-NUM[0] => Decoder0.IN7
-NUM[1] => Decoder0.IN6
-NUM[2] => Decoder0.IN5
-NUM[3] => Decoder0.IN4
-NUM[4] => Decoder0.IN3
-NUM[5] => Decoder0.IN2
-NUM[6] => Decoder0.IN1
-NUM[7] => Decoder0.IN0
-
-
-|Lab2|Counters:U1|month_day:MD0|SevenSeg:SS2
-HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
-HEX[7] <= <VCC>
-NUM[0] => Decoder0.IN7
-NUM[1] => Decoder0.IN6
-NUM[2] => Decoder0.IN5
-NUM[3] => Decoder0.IN4
-NUM[4] => Decoder0.IN3
-NUM[5] => Decoder0.IN2
-NUM[6] => Decoder0.IN1
-NUM[7] => Decoder0.IN0
-
-
 |Lab2|Counters:U1|month_day:MD0|SevenSeg:SS1
 HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -445,6 +407,44 @@ NUM[7] => Decoder0.IN0
 
 
 |Lab2|Counters:U1|month_day:MD0|SevenSeg:SS0
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab2|Counters:U1|month_day:MD0|SevenSeg:SS3
+HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= value[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= value[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= value[6].DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+NUM[0] => Decoder0.IN7
+NUM[1] => Decoder0.IN6
+NUM[2] => Decoder0.IN5
+NUM[3] => Decoder0.IN4
+NUM[4] => Decoder0.IN3
+NUM[5] => Decoder0.IN2
+NUM[6] => Decoder0.IN1
+NUM[7] => Decoder0.IN0
+
+
+|Lab2|Counters:U1|month_day:MD0|SevenSeg:SS2
 HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
 HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE

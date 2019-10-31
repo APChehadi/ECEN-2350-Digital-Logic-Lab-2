@@ -1,7 +1,9 @@
 module month_day(
+    input                       clk,
+    input                       reset_n,
+ 
     //////////// Counters //////////
-    input            [7:0]      counter_tens_p,
-    input            [7:0]      counter_ones_p,
+    input            [7:0]      total_count,
  
     //////////// SEG7 //////////
     output           [7:0]      HEX0,
@@ -10,46 +12,84 @@ module month_day(
     output           [7:0]      HEX3
 );
  
-reg [7:0] month;
-reg [7:0] day_tens_p;
-reg [7:0] day_ones_p;
+wire month_reset;
+assign month_reset = reset_n && (total_count != 31) && (total_count != 59) && (total_count != 90); 
+
+reg [7:0] disp_month;
+reg [7:0] disp_day_tens_p;
+reg [7:0] disp_day_ones_p;
+
+
+reg [7:0] counter_tens_p;
+reg [7:0] counter_ones_p;
  
-always @(counter_tens_p, counter_ones_p)
+always @(posedge clk, negedge month_reset)
     begin
-        if(counter_tens_p <= 8'd3 || counter_tens_p == 8'd88)
+        if(month_reset == 0)
             begin
-                if(counter_tens_p >= 8'd0)
-                    begin
-                        if(counter_ones_p <= 8'd1)
-                            month <= 8'd1;
-                    end
-                day_tens_p <= counter_tens_p;
-                day_ones_p <= counter_ones_p;
+                counter_tens_p <= 8'd88;
+                counter_ones_p <= 8'd1;
             end
-
-        else if(counter_tens_p <= 8'd5)
+        else
             begin
-                if(counter_tens_p >= 8'd3)
+                if(counter_ones_p != 8'd9)
                     begin
-                        if(counter_ones_p <= 8'd9)
-                            month <= 8'd2;
+                        counter_ones_p <= counter_ones_p + 1;
+                    end
+                else if(counter_ones_p == 8'd9)
+                    begin
+                        if(counter_tens_p == 8'd88)
+                            begin
+                                counter_tens_p <= 8'd1;
+                                counter_ones_p <= 8'd0;
+                            end
+                        else if(counter_tens_p == 8'd9)
+                            begin
+                                counter_tens_p <= 8'd88;
+                                counter_ones_p <= 8'd1;
+                            end
+                        else
+                            begin
+                                counter_tens_p <= counter_tens_p + 1;
+                                counter_ones_p <= 8'd0;
+                            end
                     end
             end
+    end
 
-        else if(counter_tens_p <= 8'd9)
+
+always @(total_count)
+    begin
+        if(total_count <= 8'd31)
             begin
-                if(counter_tens_p >= 8'd5)
-                    begin
-                        if(counter_ones_p <= 8'd0)
-                            month <= 8'd3;
-                    end
+                disp_month <= 8'd1;
+                disp_day_tens_p <= counter_tens_p;
+                disp_day_ones_p <= counter_ones_p;
+            end
+        else if(total_count <= 8'd59)
+            begin
+                disp_month <= 8'd2;
+                disp_day_tens_p <= counter_tens_p;
+                disp_day_ones_p <= counter_ones_p;
+            end
+        else if(total_count <= 8'd90)
+            begin
+                disp_month <= 8'd3;
+                disp_day_tens_p <= counter_tens_p;
+                disp_day_ones_p <= counter_ones_p;
+            end
+        else
+            begin
+                disp_month <= 8'd4;
+                disp_day_tens_p <= counter_tens_p;
+                disp_day_ones_p <= counter_ones_p;
             end
     end
  
     SevenSeg SS3(.HEX(HEX3), .NUM(8'd88));
-    SevenSeg SS2(.HEX(HEX2), .NUM(month));
-    SevenSeg SS1(.HEX(HEX1), .NUM(day_tens_p)); 
-    SevenSeg SS0(.HEX(HEX0), .NUM(day_ones_p));
+    SevenSeg SS2(.HEX(HEX2), .NUM(disp_month));
+    SevenSeg SS1(.HEX(HEX1), .NUM(disp_day_tens_p)); 
+    SevenSeg SS0(.HEX(HEX0), .NUM(disp_day_ones_p));
 
 
 endmodule

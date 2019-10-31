@@ -38,7 +38,7 @@ always @(negedge KEY[0])
  
 assign latch = latch_out;
     
-clock_divider #(1_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
+clock_divider #(1_500_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
 
 assign LEDR[1] = s_clk;
  

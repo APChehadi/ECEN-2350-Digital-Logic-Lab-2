@@ -42,7 +42,7 @@ clock_divider #(1_500_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_c
 
 assign LEDR[1] = s_clk;
  
-Counters U1(.clk(s_clk), .reset_n(latch), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5), .KEY(KEY), .SW(SW));
+Counters U1(.clk(s_clk), .reset_n(latch), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5));
 
  
 endmodule

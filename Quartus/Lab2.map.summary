@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Oct 31 15:42:51 2019
+Analysis & Synthesis Status : Successful - Sat Nov 02 15:13:39 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Lab2
 Top-level Entity Name : Lab2
 Family : MAX 10
-Total logic elements : 147
-    Total combinational functions : 147
+Total logic elements : 275
+    Total combinational functions : 275
     Dedicated logic registers : 50
 Total registers : 50
 Total pins : 73

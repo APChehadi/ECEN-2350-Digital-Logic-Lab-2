@@ -8,16 +8,7 @@ module Counters(
     output           [7:0]      HEX2,
     output           [7:0]      HEX3,
     output           [7:0]      HEX4,
-    output           [7:0]      HEX5,
- 
-    //////////// KEY //////////
-    input            [1:0]      KEY,
- 
-    //////////// LED //////////
-    output           [9:0]      LEDR,
- 
-    //////////// SW //////////
-    input            [9:0]      SW
+    output           [7:0]      HEX5
 );
  
 reg [7:0] counter_tens_p;
@@ -66,6 +57,6 @@ always @(posedge clk, negedge reset_n)
     SevenSeg W0(.HEX(HEX5), .NUM(counter_tens_p)); 
     SevenSeg W1(.HEX(HEX4), .NUM(counter_ones_p));
 
-    month_day MD0(.clk(s_clk), .reset_n(latch), .total_count(total_count), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3));
+    month_day MD0(.total_count(total_count), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3));
 
 endmodule

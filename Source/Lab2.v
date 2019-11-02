@@ -27,6 +27,17 @@ module Lab2(
     input            [9:0]      SW
 );
  
+
+reg [7:0] feb_day;
+always @(SW[9])
+    begin
+        if(SW[9] == 1)
+            feb_day <= 8'd29;
+        else
+            feb_day <= 8'd28;
+    end
+
+
 wire s_clk; //calculate correct size
 reg latch_out = 1'b0;
 wire latch; 
@@ -38,11 +49,12 @@ always @(negedge KEY[0])
  
 assign latch = latch_out;
     
-clock_divider #(1_500_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
+
+clock_divider #(1_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
 
 assign LEDR[1] = s_clk;
  
-Counters U1(.clk(s_clk), .reset_n(latch), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5));
+Counters U1(.clk(s_clk), .reset_n(latch), .feb_day(feb_day), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5));
 
  
 endmodule

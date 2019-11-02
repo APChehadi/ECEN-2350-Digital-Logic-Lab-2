@@ -1,5 +1,5 @@
 Fitter report for Lab2
-Sat Nov 02 15:13:51 2019
+Sat Nov 02 16:09:09 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -65,15 +65,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Nov 02 15:13:51 2019       ;
+; Fitter Status                      ; Successful - Sat Nov 02 16:09:09 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab2                                        ;
 ; Top-level Entity Name              ; Lab2                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 276 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 275 / 49,760 ( < 1 % )                      ;
+; Total logic elements               ; 282 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 281 / 49,760 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 50 / 49,760 ( < 1 % )                       ;
 ; Total registers                    ; 50                                          ;
 ; Total pins                         ; 73 / 360 ( 20 % )                           ;
@@ -156,8 +156,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.1%      ;
-;     Processors 3-6         ;   1.1%      ;
+;     Processor 2            ;   1.2%      ;
+;     Processors 3-6         ;   1.2%      ;
 +----------------------------+-------------+
 
 
@@ -167,8 +167,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 496 ) ; 0.00 % ( 0 / 496 )         ; 0.00 % ( 0 / 496 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 496 ) ; 0.00 % ( 0 / 496 )         ; 0.00 % ( 0 / 496 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 502 ) ; 0.00 % ( 0 / 502 )         ; 0.00 % ( 0 / 502 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 502 ) ; 0.00 % ( 0 / 502 )         ; 0.00 % ( 0 / 502 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -191,7 +191,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 480 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 486 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -207,26 +207,26 @@ The pin-out file can be found in C:/Users/adamp/Documents/GitHub/ECEN-2350-Digit
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 276 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 226                    ;
+; Total logic elements                        ; 282 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 232                    ;
 ;     -- Register only                        ; 1                      ;
 ;     -- Combinational with a register        ; 49                     ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 100                    ;
-;     -- 3 input functions                    ; 58                     ;
-;     -- <=2 input functions                  ; 117                    ;
+;     -- 4 input functions                    ; 101                    ;
+;     -- 3 input functions                    ; 66                     ;
+;     -- <=2 input functions                  ; 114                    ;
 ;     -- Register only                        ; 1                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 194                    ;
-;     -- arithmetic mode                      ; 81                     ;
+;     -- normal mode                          ; 199                    ;
+;     -- arithmetic mode                      ; 82                     ;
 ;                                             ;                        ;
 ; Total registers*                            ; 50 / 51,509 ( < 1 % )  ;
 ;     -- Dedicated logic registers            ; 50 / 49,760 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 27 / 3,110 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 36 / 3,110 ( 1 % )     ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 73 / 360 ( 20 % )      ;
 ;     -- Clock pins                           ; 3 / 8 ( 38 % )         ;
@@ -246,12 +246,12 @@ The pin-out file can be found in C:/Users/adamp/Documents/GitHub/ECEN-2350-Digit
 ; Remote update blocks                        ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 0.1% / 0.2% / 0.1%     ;
-; Peak interconnect usage (total/H/V)         ; 1.7% / 2.0% / 1.3%     ;
+; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%     ;
+; Peak interconnect usage (total/H/V)         ; 2.2% / 2.1% / 2.5%     ;
 ; Maximum fan-out                             ; 48                     ;
 ; Highest non-global fan-out                  ; 26                     ;
-; Total fan-out                               ; 1093                   ;
-; Average fan-out                             ; 2.20                   ;
+; Total fan-out                               ; 1114                   ;
+; Average fan-out                             ; 2.22                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -264,26 +264,26 @@ The pin-out file can be found in C:/Users/adamp/Documents/GitHub/ECEN-2350-Digit
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 276 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 226                   ; 0                              ;
+; Total logic elements                        ; 282 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 232                   ; 0                              ;
 ;     -- Register only                        ; 1                     ; 0                              ;
 ;     -- Combinational with a register        ; 49                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 100                   ; 0                              ;
-;     -- 3 input functions                    ; 58                    ; 0                              ;
-;     -- <=2 input functions                  ; 117                   ; 0                              ;
+;     -- 4 input functions                    ; 101                   ; 0                              ;
+;     -- 3 input functions                    ; 66                    ; 0                              ;
+;     -- <=2 input functions                  ; 114                   ; 0                              ;
 ;     -- Register only                        ; 1                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 194                   ; 0                              ;
-;     -- arithmetic mode                      ; 81                    ; 0                              ;
+;     -- normal mode                          ; 199                   ; 0                              ;
+;     -- arithmetic mode                      ; 82                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 50                    ; 0                              ;
 ;     -- Dedicated logic registers            ; 50 / 49760 ( < 1 % )  ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 27 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 36 / 3110 ( 1 % )     ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 73                    ; 0                              ;
@@ -301,7 +301,7 @@ The pin-out file can be found in C:/Users/adamp/Documents/GitHub/ECEN-2350-Digit
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1099                  ; 8                              ;
+;     -- Total Connections                    ; 1120                  ; 8                              ;
 ;     -- Registered Connections               ; 246                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
@@ -348,7 +348,7 @@ The pin-out file can be found in C:/Users/adamp/Documents/GitHub/ECEN-2350-Digit
 ; SW[6]         ; A13   ; 7        ; 54           ; 54           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; SW[7]         ; A14   ; 7        ; 58           ; 54           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; SW[8]         ; B14   ; 7        ; 56           ; 54           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
-; SW[9]         ; F15   ; 7        ; 69           ; 54           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
+; SW[9]         ; F15   ; 7        ; 69           ; 54           ; 0            ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+-----------------------+---------------------------+----------------------+-----------+
 
 
@@ -1015,16 +1015,16 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                         ; Entity Name   ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------------------------------+---------------+--------------+
-; |Lab2                      ; 276 (2)     ; 50 (1)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 73   ; 0            ; 226 (1)      ; 1 (0)             ; 49 (1)           ; 0          ; |Lab2                                                       ; Lab2          ; work         ;
-;    |Counters:U1|           ; 230 (48)    ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 206 (24)     ; 0 (0)             ; 24 (20)          ; 0          ; |Lab2|Counters:U1                                           ; Counters      ; work         ;
+; |Lab2                      ; 282 (2)     ; 50 (1)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 73   ; 0            ; 232 (1)      ; 1 (0)             ; 49 (1)           ; 0          ; |Lab2                                                       ; Lab2          ; work         ;
+;    |Counters:U1|           ; 239 (46)    ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 215 (22)     ; 0 (0)             ; 24 (22)          ; 0          ; |Lab2|Counters:U1                                           ; Counters      ; work         ;
 ;       |SevenSeg:W0|        ; 24 (24)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 0 (0)            ; 0          ; |Lab2|Counters:U1|SevenSeg:W0                               ; SevenSeg      ; work         ;
-;       |SevenSeg:W1|        ; 24 (24)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 0 (0)             ; 4 (4)            ; 0          ; |Lab2|Counters:U1|SevenSeg:W1                               ; SevenSeg      ; work         ;
-;       |month_day:MD0|      ; 138 (45)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 138 (45)     ; 0 (0)             ; 0 (0)            ; 0          ; |Lab2|Counters:U1|month_day:MD0                             ; month_day     ; work         ;
+;       |SevenSeg:W1|        ; 24 (24)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 2 (2)            ; 0          ; |Lab2|Counters:U1|SevenSeg:W1                               ; SevenSeg      ; work         ;
+;       |month_day:MD0|      ; 147 (48)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 147 (48)     ; 0 (0)             ; 0 (0)            ; 0          ; |Lab2|Counters:U1|month_day:MD0                             ; month_day     ; work         ;
 ;          |SevenSeg:SS2|    ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0          ; |Lab2|Counters:U1|month_day:MD0|SevenSeg:SS2                ; SevenSeg      ; work         ;
-;          |day_display:DD|  ; 90 (51)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 90 (51)      ; 0 (0)             ; 0 (0)            ; 0          ; |Lab2|Counters:U1|month_day:MD0|day_display:DD              ; day_display   ; work         ;
+;          |day_display:DD|  ; 96 (57)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 96 (57)      ; 0 (0)             ; 0 (0)            ; 0          ; |Lab2|Counters:U1|month_day:MD0|day_display:DD              ; day_display   ; work         ;
 ;             |SevenSeg:SS0| ; 25 (25)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 0 (0)            ; 0          ; |Lab2|Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS0 ; SevenSeg      ; work         ;
 ;             |SevenSeg:SS1| ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0          ; |Lab2|Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS1 ; SevenSeg      ; work         ;
-;    |clock_divider:U0|      ; 44 (44)     ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 1 (1)             ; 24 (24)          ; 0          ; |Lab2|clock_divider:U0                                      ; clock_divider ; work         ;
+;    |clock_divider:U0|      ; 41 (41)     ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 1 (1)             ; 24 (24)          ; 0          ; |Lab2|clock_divider:U0                                      ; clock_divider ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1104,54 +1104,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[6]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[7]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[8]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; SW[9]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[9]         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; ADC_CLK_10    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; KEY[0]        ; Input    ; --            ; (0) 0 ps      ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; MAX10_CLK1_50       ;                   ;         ;
-; MAX10_CLK2_50       ;                   ;         ;
-; KEY[1]              ;                   ;         ;
-; SW[0]               ;                   ;         ;
-; SW[1]               ;                   ;         ;
-; SW[2]               ;                   ;         ;
-; SW[3]               ;                   ;         ;
-; SW[4]               ;                   ;         ;
-; SW[5]               ;                   ;         ;
-; SW[6]               ;                   ;         ;
-; SW[7]               ;                   ;         ;
-; SW[8]               ;                   ;         ;
-; SW[9]               ;                   ;         ;
-; ADC_CLK_10          ;                   ;         ;
-; KEY[0]              ;                   ;         ;
-;      - latch_out    ; 1                 ; 0       ;
-+---------------------+-------------------+---------+
++----------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                             ;
++----------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                          ; Pad To Core Index ; Setting ;
++----------------------------------------------+-------------------+---------+
+; MAX10_CLK1_50                                ;                   ;         ;
+; MAX10_CLK2_50                                ;                   ;         ;
+; KEY[1]                                       ;                   ;         ;
+; SW[0]                                        ;                   ;         ;
+; SW[1]                                        ;                   ;         ;
+; SW[2]                                        ;                   ;         ;
+; SW[3]                                        ;                   ;         ;
+; SW[4]                                        ;                   ;         ;
+; SW[5]                                        ;                   ;         ;
+; SW[6]                                        ;                   ;         ;
+; SW[7]                                        ;                   ;         ;
+; SW[8]                                        ;                   ;         ;
+; SW[9]                                        ;                   ;         ;
+;      - Counters:U1|month_day:MD0|Add5~4      ; 0                 ; 6       ;
+;      - Counters:U1|month_day:MD0|Add5~2      ; 0                 ; 6       ;
+;      - Counters:U1|month_day:MD0|Add5~0      ; 0                 ; 6       ;
+;      - Counters:U1|month_day:MD0|Add8~0      ; 0                 ; 6       ;
+;      - Counters:U1|month_day:MD0|LessThan1~0 ; 0                 ; 6       ;
+;      - Counters:U1|month_day:MD0|LessThan2~0 ; 0                 ; 6       ;
+; ADC_CLK_10                                   ;                   ;         ;
+; KEY[0]                                       ;                   ;         ;
+;      - latch_out                             ; 1                 ; 0       ;
++----------------------------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                               ;
-+------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                             ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; ADC_CLK_10                                                       ; PIN_N5             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; ADC_CLK_10                                                       ; PIN_N5             ; 24      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; Counters:U1|Equal0~2                                             ; LCCOMB_X70_Y42_N30 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Counters:U1|SevenSeg:W0|WideOr1~2                                ; LCCOMB_X70_Y39_N22 ; 7       ; Latch enable ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; Counters:U1|SevenSeg:W1|WideOr1~2                                ; LCCOMB_X70_Y42_N24 ; 7       ; Latch enable ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS0|WideOr1~3  ; LCCOMB_X54_Y49_N0  ; 7       ; Latch enable ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS1|Decoder0~4 ; LCCOMB_X55_Y49_N12 ; 9       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS1|WideOr1~0  ; LCCOMB_X52_Y49_N0  ; 6       ; Latch enable ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; Counters:U1|total_count~24                                       ; LCCOMB_X70_Y41_N0  ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; KEY[0]                                                           ; PIN_B8             ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clock_divider:U0|slw_clk                                         ; FF_X50_Y42_N27     ; 26      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; latch_out                                                        ; FF_X45_Y53_N17     ; 48      ; Async. clear ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-+------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                              ;
++-----------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                            ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; ADC_CLK_10                                                      ; PIN_N5             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; ADC_CLK_10                                                      ; PIN_N5             ; 24      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; Counters:U1|Equal0~2                                            ; LCCOMB_X71_Y39_N8  ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Counters:U1|SevenSeg:W0|WideOr1~2                               ; LCCOMB_X66_Y41_N4  ; 7       ; Latch enable ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; Counters:U1|SevenSeg:W1|WideOr1~2                               ; LCCOMB_X71_Y38_N0  ; 7       ; Latch enable ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS0|WideOr1~3 ; LCCOMB_X71_Y48_N30 ; 7       ; Latch enable ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS1|WideOr1~1 ; LCCOMB_X70_Y48_N14 ; 6       ; Latch enable ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; Counters:U1|month_day:MD0|day_display:DD|counter_ones_p[6]~0    ; LCCOMB_X70_Y48_N28 ; 8       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; Counters:U1|total_count~24                                      ; LCCOMB_X66_Y41_N0  ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; KEY[0]                                                          ; PIN_B8             ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clock_divider:U0|slw_clk                                        ; FF_X59_Y38_N17     ; 26      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; latch_out                                                       ; FF_X45_Y50_N17     ; 48      ; Async. clear ; yes    ; Global Clock         ; GCLK13           ; --                        ;
++-----------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1160,11 +1166,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                            ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; ADC_CLK_10                                                      ; PIN_N5             ; 24      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-; Counters:U1|SevenSeg:W0|WideOr1~2                               ; LCCOMB_X70_Y39_N22 ; 7       ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
-; Counters:U1|SevenSeg:W1|WideOr1~2                               ; LCCOMB_X70_Y42_N24 ; 7       ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
-; Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS0|WideOr1~3 ; LCCOMB_X54_Y49_N0  ; 7       ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
-; Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS1|WideOr1~0 ; LCCOMB_X52_Y49_N0  ; 6       ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
-; latch_out                                                       ; FF_X45_Y53_N17     ; 48      ; 0                                    ; Global Clock         ; GCLK10           ; --                        ;
+; Counters:U1|SevenSeg:W0|WideOr1~2                               ; LCCOMB_X66_Y41_N4  ; 7       ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
+; Counters:U1|SevenSeg:W1|WideOr1~2                               ; LCCOMB_X71_Y38_N0  ; 7       ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
+; Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS0|WideOr1~3 ; LCCOMB_X71_Y48_N30 ; 7       ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
+; Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS1|WideOr1~1 ; LCCOMB_X70_Y48_N14 ; 6       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
+; latch_out                                                       ; FF_X45_Y50_N17     ; 48      ; 0                                    ; Global Clock         ; GCLK13           ; --                        ;
 +-----------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1173,46 +1179,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 321 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 4 / 5,382 ( < 1 % )     ;
-; C4 interconnects      ; 110 / 106,704 ( < 1 % ) ;
-; Direct links          ; 118 / 148,641 ( < 1 % ) ;
+; Block interconnects   ; 331 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 10 / 5,382 ( < 1 % )    ;
+; C4 interconnects      ; 144 / 106,704 ( < 1 % ) ;
+; Direct links          ; 95 / 148,641 ( < 1 % )  ;
 ; Global clocks         ; 6 / 20 ( 30 % )         ;
-; Local interconnects   ; 160 / 49,760 ( < 1 % )  ;
+; Local interconnects   ; 162 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 12 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 216 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 9 / 5,406 ( < 1 % )     ;
+; R4 interconnects      ; 193 / 147,764 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Logic Elements                                                         ;
-+---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 10.22) ; Number of LABs  (Total = 27) ;
-+---------------------------------------------+------------------------------+
-; 1                                           ; 5                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 3                            ;
-; 13                                          ; 3                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 4                            ;
-; 16                                          ; 5                            ;
-+---------------------------------------------+------------------------------+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++--------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 7.83) ; Number of LABs  (Total = 36) ;
++--------------------------------------------+------------------------------+
+; 1                                          ; 14                           ;
+; 2                                          ; 2                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 0                            ;
+; 5                                          ; 0                            ;
+; 6                                          ; 1                            ;
+; 7                                          ; 2                            ;
+; 8                                          ; 0                            ;
+; 9                                          ; 1                            ;
+; 10                                         ; 2                            ;
+; 11                                         ; 0                            ;
+; 12                                         ; 1                            ;
+; 13                                         ; 0                            ;
+; 14                                         ; 1                            ;
+; 15                                         ; 3                            ;
+; 16                                         ; 9                            ;
++--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.67) ; Number of LABs  (Total = 27) ;
+; LAB-wide Signals  (Average = 0.50) ; Number of LABs  (Total = 36) ;
 +------------------------------------+------------------------------+
 ; 1 Async. clear                     ; 7                            ;
 ; 1 Clock                            ; 9                            ;
@@ -1221,87 +1227,93 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------+------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 12.00) ; Number of LABs  (Total = 27) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 3                            ;
-; 2                                            ; 2                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 4                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 3                            ;
-+----------------------------------------------+------------------------------+
++----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 9.17) ; Number of LABs  (Total = 36) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 13                           ;
+; 2                                           ; 2                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 2                            ;
+; 11                                          ; 2                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 2                            ;
+; 16                                          ; 5                            ;
+; 17                                          ; 0                            ;
+; 18                                          ; 0                            ;
+; 19                                          ; 0                            ;
+; 20                                          ; 0                            ;
+; 21                                          ; 0                            ;
+; 22                                          ; 0                            ;
+; 23                                          ; 0                            ;
+; 24                                          ; 4                            ;
+; 25                                          ; 1                            ;
++---------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.07) ; Number of LABs  (Total = 27) ;
+; Number of Signals Sourced Out  (Average = 4.92) ; Number of LABs  (Total = 36) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 5                            ;
-; 2                                               ; 1                            ;
+; 1                                               ; 14                           ;
+; 2                                               ; 2                            ;
 ; 3                                               ; 1                            ;
 ; 4                                               ; 0                            ;
-; 5                                               ; 1                            ;
+; 5                                               ; 3                            ;
 ; 6                                               ; 3                            ;
-; 7                                               ; 3                            ;
+; 7                                               ; 4                            ;
 ; 8                                               ; 2                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 3                            ;
-; 11                                              ; 4                            ;
+; 9                                               ; 2                            ;
+; 10                                              ; 0                            ;
+; 11                                              ; 2                            ;
 ; 12                                              ; 2                            ;
 ; 13                                              ; 0                            ;
-; 14                                              ; 1                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 9.11) ; Number of LABs  (Total = 27) ;
+; Number of Distinct Inputs  (Average = 6.86) ; Number of LABs  (Total = 36) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 1                            ;
-; 2                                           ; 3                            ;
+; 2                                           ; 11                           ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 4                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 3                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 2                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 2                            ;
-; 15                                          ; 1                            ;
-; 16                                          ; 1                            ;
-; 17                                          ; 1                            ;
+; 4                                           ; 3                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 1                            ;
+; 7                                           ; 4                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 2                            ;
+; 12                                          ; 3                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 0                            ;
+; 17                                          ; 0                            ;
 ; 18                                          ; 1                            ;
-; 19                                          ; 2                            ;
+; 19                                          ; 1                            ;
+; 20                                          ; 0                            ;
+; 21                                          ; 0                            ;
+; 22                                          ; 0                            ;
+; 23                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -1521,8 +1533,8 @@ Warning (332060): Node: clock_divider:U0|slw_clk was determined to be a clock bu
     Info (13166): Register Counters:U1|total_count[7] is being clocked by clock_divider:U0|slw_clk
 Warning (332060): Node: KEY[0] was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register latch_out is being clocked by KEY[0]
-Warning (332060): Node: Counters:U1|total_count[0] was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch Counters:U1|month_day:MD0|day_display:DD|counter_ones_p[6] is being clocked by Counters:U1|total_count[0]
+Warning (332060): Node: SW[9] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch Counters:U1|month_day:MD0|day_display:DD|counter_ones_p[6] is being clocked by SW[9]
 Warning (332060): Node: Counters:U1|month_day:MD0|day_display:DD|counter_ones_p[0] was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Latch Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS0|value[1] is being clocked by Counters:U1|month_day:MD0|day_display:DD|counter_ones_p[0]
 Warning (332060): Node: Counters:U1|counter_ones_p[0] was determined to be a clock but was found without an associated clock assignment.
@@ -1547,13 +1559,13 @@ Info (176353): Automatically promoted node Counters:U1|SevenSeg:W0|WideOr1~2  Fi
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node Counters:U1|SevenSeg:W1|WideOr1~2  File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 18
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS1|WideOr1~0  File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 18
+Info (176353): Automatically promoted node Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS1|WideOr1~1  File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/SevenSeg.v Line: 18
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node latch_out  File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 34
+Info (176353): Automatically promoted node latch_out  File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 45
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node clock_divider:U0|slw_clk~0 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/clock_divider.v Line: 20
-        Info (176357): Destination node latch_out~0 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 34
+        Info (176357): Destination node latch_out~0 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 45
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1566,7 +1578,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X45_Y44 to location X55_Y54
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X67_Y44 to location X78_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
@@ -1595,10 +1607,10 @@ Warning (169177): 15 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin KEY[0] uses I/O standard 3.3 V Schmitt Trigger at B8 File: C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Source/Lab2.v Line: 21
 Info (144001): Generated suppressed messages file C:/Users/adamp/Documents/GitHub/ECEN-2350-Digital-Logic-Lab-2/Quartus/Lab2.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 5786 megabytes
-    Info: Processing ended: Sat Nov 02 15:13:51 2019
+    Info: Peak virtual memory: 5792 megabytes
+    Info: Processing ended: Sat Nov 02 16:09:10 2019
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +----------------------------+

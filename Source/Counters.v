@@ -1,6 +1,9 @@
 module Counters(
     input                       clk,
     input                       reset_n,
+
+    //////////// LEAP YEAR //////////
+    input           [7:0]       feb_day,
  
     //////////// SEG7 //////////
     output           [7:0]      HEX0,
@@ -57,6 +60,6 @@ always @(posedge clk, negedge reset_n)
     SevenSeg W0(.HEX(HEX5), .NUM(counter_tens_p)); 
     SevenSeg W1(.HEX(HEX4), .NUM(counter_ones_p));
 
-    month_day MD0(.total_count(total_count), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3));
+    month_day MD0(.total_count(total_count), .feb_day(feb_day), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3));
 
 endmodule

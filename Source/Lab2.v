@@ -38,7 +38,22 @@ always @(SW[9])
     end
 
 
-wire s_clk; //calculate correct size
+wire s_clk;
+assign LEDR[1] = s_clk;
+wire s_clk_1;
+wire s_clk_2;
+
+reg div_val = 1'b1;
+wire val;
+
+always @(negedge KEY[1])
+    begin
+        div_val <= ~div_val;
+    end
+
+assign val = div_val;
+
+
 reg latch_out = 1'b0;
 wire latch; 
 
@@ -48,13 +63,15 @@ always @(negedge KEY[0])
 	end
  
 assign latch = latch_out;
-    
+assign LEDR[0] = latch;
 
-clock_divider #(1_000_000) U0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk));
 
-assign LEDR[1] = s_clk;
+clock_divider #(1_000_000) CD0(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk_1));
+clock_divider #(5_000_000) CD1(.clk(ADC_CLK_10), .reset_n(latch), .slower_clk(s_clk_2));
+
+clock_choice CC0(.select(val), .latch(latch), .s_clk(s_clk), .s1(s_clk_1), .s2(s_clk_2));
  
-Counters U1(.clk(s_clk), .reset_n(latch), .feb_day(feb_day), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5));
+Counters C1(.clk(s_clk), .reset_n(latch), .feb_day(feb_day), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5));
 
  
 endmodule

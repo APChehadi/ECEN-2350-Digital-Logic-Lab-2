@@ -1,67 +1,67 @@
 |Lab2
-ADC_CLK_10 => ADC_CLK_10.IN1
+ADC_CLK_10 => ADC_CLK_10.IN2
 MAX10_CLK1_50 => ~NO_FANOUT~
 MAX10_CLK2_50 => ~NO_FANOUT~
-HEX0[0] << Counters:U1.HEX0
-HEX0[1] << Counters:U1.HEX0
-HEX0[2] << Counters:U1.HEX0
-HEX0[3] << Counters:U1.HEX0
-HEX0[4] << Counters:U1.HEX0
-HEX0[5] << Counters:U1.HEX0
-HEX0[6] << Counters:U1.HEX0
-HEX0[7] << Counters:U1.HEX0
-HEX1[0] << Counters:U1.HEX1
-HEX1[1] << Counters:U1.HEX1
-HEX1[2] << Counters:U1.HEX1
-HEX1[3] << Counters:U1.HEX1
-HEX1[4] << Counters:U1.HEX1
-HEX1[5] << Counters:U1.HEX1
-HEX1[6] << Counters:U1.HEX1
-HEX1[7] << Counters:U1.HEX1
-HEX2[0] << Counters:U1.HEX2
-HEX2[1] << Counters:U1.HEX2
-HEX2[2] << Counters:U1.HEX2
-HEX2[3] << Counters:U1.HEX2
-HEX2[4] << Counters:U1.HEX2
-HEX2[5] << Counters:U1.HEX2
-HEX2[6] << Counters:U1.HEX2
-HEX2[7] << Counters:U1.HEX2
-HEX3[0] << Counters:U1.HEX3
-HEX3[1] << Counters:U1.HEX3
-HEX3[2] << Counters:U1.HEX3
-HEX3[3] << Counters:U1.HEX3
-HEX3[4] << Counters:U1.HEX3
-HEX3[5] << Counters:U1.HEX3
-HEX3[6] << Counters:U1.HEX3
-HEX3[7] << Counters:U1.HEX3
-HEX4[0] << Counters:U1.HEX4
-HEX4[1] << Counters:U1.HEX4
-HEX4[2] << Counters:U1.HEX4
-HEX4[3] << Counters:U1.HEX4
-HEX4[4] << Counters:U1.HEX4
-HEX4[5] << Counters:U1.HEX4
-HEX4[6] << Counters:U1.HEX4
-HEX4[7] << Counters:U1.HEX4
-HEX5[0] << Counters:U1.HEX5
-HEX5[1] << Counters:U1.HEX5
-HEX5[2] << Counters:U1.HEX5
-HEX5[3] << Counters:U1.HEX5
-HEX5[4] << Counters:U1.HEX5
-HEX5[5] << Counters:U1.HEX5
-HEX5[6] << Counters:U1.HEX5
-HEX5[7] << Counters:U1.HEX5
+HEX0[0] <= Counters:C1.HEX0
+HEX0[1] <= Counters:C1.HEX0
+HEX0[2] <= Counters:C1.HEX0
+HEX0[3] <= Counters:C1.HEX0
+HEX0[4] <= Counters:C1.HEX0
+HEX0[5] <= Counters:C1.HEX0
+HEX0[6] <= Counters:C1.HEX0
+HEX0[7] <= Counters:C1.HEX0
+HEX1[0] <= Counters:C1.HEX1
+HEX1[1] <= Counters:C1.HEX1
+HEX1[2] <= Counters:C1.HEX1
+HEX1[3] <= Counters:C1.HEX1
+HEX1[4] <= Counters:C1.HEX1
+HEX1[5] <= Counters:C1.HEX1
+HEX1[6] <= Counters:C1.HEX1
+HEX1[7] <= Counters:C1.HEX1
+HEX2[0] <= Counters:C1.HEX2
+HEX2[1] <= Counters:C1.HEX2
+HEX2[2] <= Counters:C1.HEX2
+HEX2[3] <= Counters:C1.HEX2
+HEX2[4] <= Counters:C1.HEX2
+HEX2[5] <= Counters:C1.HEX2
+HEX2[6] <= Counters:C1.HEX2
+HEX2[7] <= Counters:C1.HEX2
+HEX3[0] <= Counters:C1.HEX3
+HEX3[1] <= Counters:C1.HEX3
+HEX3[2] <= Counters:C1.HEX3
+HEX3[3] <= Counters:C1.HEX3
+HEX3[4] <= Counters:C1.HEX3
+HEX3[5] <= Counters:C1.HEX3
+HEX3[6] <= Counters:C1.HEX3
+HEX3[7] <= Counters:C1.HEX3
+HEX4[0] <= Counters:C1.HEX4
+HEX4[1] <= Counters:C1.HEX4
+HEX4[2] <= Counters:C1.HEX4
+HEX4[3] <= Counters:C1.HEX4
+HEX4[4] <= Counters:C1.HEX4
+HEX4[5] <= Counters:C1.HEX4
+HEX4[6] <= Counters:C1.HEX4
+HEX4[7] <= Counters:C1.HEX4
+HEX5[0] <= Counters:C1.HEX5
+HEX5[1] <= Counters:C1.HEX5
+HEX5[2] <= Counters:C1.HEX5
+HEX5[3] <= Counters:C1.HEX5
+HEX5[4] <= Counters:C1.HEX5
+HEX5[5] <= Counters:C1.HEX5
+HEX5[6] <= Counters:C1.HEX5
+HEX5[7] <= Counters:C1.HEX5
 KEY[0] => latch_out.CLK
-KEY[1] => ~NO_FANOUT~
-LEDR[0] << <GND>
-LEDR[1] << s_clk.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[2] << <GND>
-LEDR[3] << <GND>
-LEDR[4] << <GND>
-LEDR[5] << <GND>
-LEDR[6] << <GND>
-LEDR[7] << <GND>
-LEDR[8] << <GND>
-LEDR[9] << <GND>
+KEY[1] => div_val.CLK
+LEDR[0] <= latch.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= s_clk.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
 SW[0] => ~NO_FANOUT~
 SW[1] => ~NO_FANOUT~
 SW[2] => ~NO_FANOUT~
@@ -74,7 +74,7 @@ SW[8] => ~NO_FANOUT~
 SW[9] => feb_day[0].IN1
 
 
-|Lab2|clock_divider:U0
+|Lab2|clock_divider:CD0
 clk => slw_clk.CLK
 clk => div_cntr[0].CLK
 clk => div_cntr[1].CLK
@@ -128,7 +128,69 @@ reset_n => slw_clk.ENA
 slower_clk <= slw_clk.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Lab2|Counters:U1
+|Lab2|clock_divider:CD1
+clk => slw_clk.CLK
+clk => div_cntr[0].CLK
+clk => div_cntr[1].CLK
+clk => div_cntr[2].CLK
+clk => div_cntr[3].CLK
+clk => div_cntr[4].CLK
+clk => div_cntr[5].CLK
+clk => div_cntr[6].CLK
+clk => div_cntr[7].CLK
+clk => div_cntr[8].CLK
+clk => div_cntr[9].CLK
+clk => div_cntr[10].CLK
+clk => div_cntr[11].CLK
+clk => div_cntr[12].CLK
+clk => div_cntr[13].CLK
+clk => div_cntr[14].CLK
+clk => div_cntr[15].CLK
+clk => div_cntr[16].CLK
+clk => div_cntr[17].CLK
+clk => div_cntr[18].CLK
+clk => div_cntr[19].CLK
+clk => div_cntr[20].CLK
+clk => div_cntr[21].CLK
+clk => div_cntr[22].CLK
+clk => div_cntr[23].CLK
+reset_n => div_cntr[0].ACLR
+reset_n => div_cntr[1].ACLR
+reset_n => div_cntr[2].ACLR
+reset_n => div_cntr[3].ACLR
+reset_n => div_cntr[4].ACLR
+reset_n => div_cntr[5].ACLR
+reset_n => div_cntr[6].ACLR
+reset_n => div_cntr[7].ACLR
+reset_n => div_cntr[8].ACLR
+reset_n => div_cntr[9].ACLR
+reset_n => div_cntr[10].ACLR
+reset_n => div_cntr[11].ACLR
+reset_n => div_cntr[12].ACLR
+reset_n => div_cntr[13].ACLR
+reset_n => div_cntr[14].ACLR
+reset_n => div_cntr[15].ACLR
+reset_n => div_cntr[16].ACLR
+reset_n => div_cntr[17].ACLR
+reset_n => div_cntr[18].ACLR
+reset_n => div_cntr[19].ACLR
+reset_n => div_cntr[20].ACLR
+reset_n => div_cntr[21].ACLR
+reset_n => div_cntr[22].ACLR
+reset_n => div_cntr[23].ACLR
+reset_n => slw_clk.ENA
+slower_clk <= slw_clk.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2|clock_choice:CC0
+select => Decoder0.IN0
+latch => ~NO_FANOUT~
+s_clk <= SCLK.DB_MAX_OUTPUT_PORT_TYPE
+s1 => SCLK.DATAA
+s2[0] => SCLK.DATAB
+
+
+|Lab2|Counters:C1
 clk => total_count[0].CLK
 clk => total_count[1].CLK
 clk => total_count[2].CLK
@@ -235,7 +297,7 @@ HEX5[6] <= SevenSeg:W0.HEX
 HEX5[7] <= SevenSeg:W0.HEX
 
 
-|Lab2|Counters:U1|SevenSeg:W0
+|Lab2|Counters:C1|SevenSeg:W0
 HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
 HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -254,7 +316,7 @@ NUM[6] => Decoder0.IN1
 NUM[7] => Decoder0.IN0
 
 
-|Lab2|Counters:U1|SevenSeg:W1
+|Lab2|Counters:C1|SevenSeg:W1
 HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
 HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -273,7 +335,7 @@ NUM[6] => Decoder0.IN1
 NUM[7] => Decoder0.IN0
 
 
-|Lab2|Counters:U1|month_day:MD0
+|Lab2|Counters:C1|month_day:MD0
 total_count[0] => LessThan0.IN16
 total_count[0] => LessThan1.IN16
 total_count[0] => Add1.IN16
@@ -396,7 +458,7 @@ HEX3[6] <= SevenSeg:SS3.HEX
 HEX3[7] <= SevenSeg:SS3.HEX
 
 
-|Lab2|Counters:U1|month_day:MD0|SevenSeg:SS3
+|Lab2|Counters:C1|month_day:MD0|SevenSeg:SS3
 HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
 HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -415,7 +477,7 @@ NUM[6] => Decoder0.IN1
 NUM[7] => Decoder0.IN0
 
 
-|Lab2|Counters:U1|month_day:MD0|SevenSeg:SS2
+|Lab2|Counters:C1|month_day:MD0|SevenSeg:SS2
 HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
 HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -434,7 +496,7 @@ NUM[6] => Decoder0.IN1
 NUM[7] => Decoder0.IN0
 
 
-|Lab2|Counters:U1|month_day:MD0|day_display:DD
+|Lab2|Counters:C1|month_day:MD0|day_display:DD
 day_full[0] => LessThan0.IN16
 day_full[0] => LessThan1.IN16
 day_full[0] => LessThan2.IN16
@@ -514,7 +576,7 @@ HEX1[6] <= SevenSeg:SS1.HEX
 HEX1[7] <= SevenSeg:SS1.HEX
 
 
-|Lab2|Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS1
+|Lab2|Counters:C1|month_day:MD0|day_display:DD|SevenSeg:SS1
 HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
 HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -533,7 +595,7 @@ NUM[6] => Decoder0.IN1
 NUM[7] => Decoder0.IN0
 
 
-|Lab2|Counters:U1|month_day:MD0|day_display:DD|SevenSeg:SS0
+|Lab2|Counters:C1|month_day:MD0|day_display:DD|SevenSeg:SS0
 HEX[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
 HEX[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
 HEX[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE

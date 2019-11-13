@@ -1,0 +1,700 @@
+$date
+	Wed Nov 06 22:07:57 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module Lab2 $end
+$var wire 1 ! ADC_CLK_10 $end
+$var wire 2 " KEY [1:0] $end
+$var wire 1 # MAX10_CLK1_50 $end
+$var wire 1 $ MAX10_CLK2_50 $end
+$var wire 10 % SW [9:0] $end
+$var wire 1 & s_clk $end
+$var wire 1 ' val $end
+$var wire 1 ( s_clk_2 $end
+$var wire 1 ) s_clk_1 $end
+$var wire 1 * latch $end
+$var wire 10 + LEDR [9:0] $end
+$var wire 8 , HEX5 [7:0] $end
+$var wire 8 - HEX4 [7:0] $end
+$var wire 8 . HEX3 [7:0] $end
+$var wire 8 / HEX2 [7:0] $end
+$var wire 8 0 HEX1 [7:0] $end
+$var wire 8 1 HEX0 [7:0] $end
+$var reg 1 2 div_val $end
+$var reg 8 3 feb_day [7:0] $end
+$var reg 1 * latch_out $end
+$scope module C1 $end
+$var wire 1 & clk $end
+$var wire 8 4 feb_day [7:0] $end
+$var wire 1 * reset_n $end
+$var wire 8 5 HEX5 [7:0] $end
+$var wire 8 6 HEX4 [7:0] $end
+$var wire 8 7 HEX3 [7:0] $end
+$var wire 8 8 HEX2 [7:0] $end
+$var wire 8 9 HEX1 [7:0] $end
+$var wire 8 : HEX0 [7:0] $end
+$var reg 8 ; counter_ones_p [7:0] $end
+$var reg 8 < counter_tens_p [7:0] $end
+$var reg 8 = total_count [7:0] $end
+$scope module MD0 $end
+$var wire 8 > feb_day [7:0] $end
+$var wire 8 ? total_count [7:0] $end
+$var wire 8 @ HEX3 [7:0] $end
+$var wire 8 A HEX2 [7:0] $end
+$var wire 8 B HEX1 [7:0] $end
+$var wire 8 C HEX0 [7:0] $end
+$var reg 8 D day_full [7:0] $end
+$var reg 8 E disp_month [7:0] $end
+$scope module DD $end
+$var wire 8 F day_full [7:0] $end
+$var wire 8 G HEX1 [7:0] $end
+$var wire 8 H HEX0 [7:0] $end
+$var reg 8 I counter_ones_p [7:0] $end
+$var reg 8 J counter_tens_p [7:0] $end
+$scope module SS0 $end
+$var wire 8 K HEX [7:0] $end
+$var wire 8 L NUM [7:0] $end
+$var reg 8 M value [7:0] $end
+$upscope $end
+$scope module SS1 $end
+$var wire 8 N HEX [7:0] $end
+$var wire 8 O NUM [7:0] $end
+$var reg 8 P value [7:0] $end
+$upscope $end
+$upscope $end
+$scope module SS2 $end
+$var wire 8 Q HEX [7:0] $end
+$var wire 8 R NUM [7:0] $end
+$var reg 8 S value [7:0] $end
+$upscope $end
+$scope module SS3 $end
+$var wire 8 T HEX [7:0] $end
+$var wire 8 U NUM [7:0] $end
+$var reg 8 V value [7:0] $end
+$upscope $end
+$upscope $end
+$scope module W0 $end
+$var wire 8 W HEX [7:0] $end
+$var wire 8 X NUM [7:0] $end
+$var reg 8 Y value [7:0] $end
+$upscope $end
+$scope module W1 $end
+$var wire 8 Z HEX [7:0] $end
+$var wire 8 [ NUM [7:0] $end
+$var reg 8 \ value [7:0] $end
+$upscope $end
+$upscope $end
+$scope module CC0 $end
+$var wire 1 * latch $end
+$var wire 1 & s_clk $end
+$var wire 1 ' select $end
+$var wire 1 ( s2 $end
+$var wire 1 ) s1 $end
+$var reg 1 ] SCLK $end
+$upscope $end
+$scope module CD0 $end
+$var wire 1 ! clk $end
+$var wire 1 * reset_n $end
+$var wire 1 ) slower_clk $end
+$var reg 24 ^ div_cntr [23:0] $end
+$var reg 1 _ slw_clk $end
+$upscope $end
+$scope module CD1 $end
+$var wire 1 ! clk $end
+$var wire 1 * reset_n $end
+$var wire 1 ( slower_clk $end
+$var reg 24 ` div_cntr [23:0] $end
+$var reg 1 a slw_clk $end
+$upscope $end
+$upscope $end
+$scope module TB_clock_divider $end
+$var wire 1 b SCLK $end
+$var reg 1 c Rn $end
+$var reg 1 d clk $end
+$scope module CD0 $end
+$var wire 1 d clk $end
+$var wire 1 c reset_n $end
+$var wire 1 b slower_clk $end
+$var reg 24 e div_cntr [23:0] $end
+$var reg 1 f slw_clk $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xf
+b0 e
+0d
+0c
+xb
+xa
+b0 `
+x_
+b0 ^
+x]
+b11111001 \
+b1 [
+b11111001 Z
+b11111111 Y
+b1011000 X
+b11111111 W
+b11111111 V
+b1011000 U
+b11111111 T
+b11111001 S
+b1 R
+b11111001 Q
+b11111111 P
+b1011000 O
+b11111111 N
+b11111001 M
+b1 L
+b11111001 K
+b1011000 J
+b1 I
+b11111001 H
+b11111111 G
+b1 F
+b1 E
+b1 D
+b11111001 C
+b11111111 B
+b11111001 A
+b11111111 @
+b1 ?
+b11100 >
+b1 =
+b1011000 <
+b1 ;
+b11111001 :
+b11111111 9
+b11111001 8
+b11111111 7
+b11111001 6
+b11111111 5
+b11100 4
+b11100 3
+12
+b11111001 1
+b11111111 0
+b11111001 /
+b11111111 .
+b11111001 -
+b11111111 ,
+bzx0 +
+0*
+x)
+x(
+1'
+x&
+bz %
+z$
+z#
+bz "
+z!
+$end
+#50
+1d
+#100
+0d
+1c
+#150
+b1 e
+1d
+#200
+0d
+#250
+b10 e
+1d
+#300
+0d
+#350
+b11 e
+1d
+#400
+0d
+#450
+b100 e
+1d
+#500
+0d
+#550
+b0 e
+1d
+#600
+0d
+#650
+b1 e
+1d
+#700
+0d
+#750
+b10 e
+1d
+#800
+0d
+#850
+b11 e
+1d
+#900
+0d
+#950
+b100 e
+1d
+#1000
+0d
+#1050
+b0 e
+1d
+#1100
+0d
+#1150
+b1 e
+1d
+#1200
+0d
+#1250
+b10 e
+1d
+#1300
+0d
+#1350
+b11 e
+1d
+#1400
+0d
+#1450
+b100 e
+1d
+#1500
+0d
+#1550
+b0 e
+1d
+#1600
+0d
+#1650
+b1 e
+1d
+#1700
+0d
+#1750
+b10 e
+1d
+#1800
+0d
+#1850
+b11 e
+1d
+#1900
+0d
+#1950
+b100 e
+1d
+#2000
+0d
+#2050
+b0 e
+1d
+#2100
+0d
+#2150
+b1 e
+1d
+#2200
+0d
+#2250
+b10 e
+1d
+#2300
+0d
+#2350
+b11 e
+1d
+#2400
+0d
+#2450
+b100 e
+1d
+#2500
+0d
+#2550
+b0 e
+1d
+#2600
+0d
+#2650
+b1 e
+1d
+#2700
+0d
+#2750
+b10 e
+1d
+#2800
+0d
+#2850
+b11 e
+1d
+#2900
+0d
+#2950
+b100 e
+1d
+#3000
+0d
+#3050
+b0 e
+1d
+#3100
+0d
+#3150
+b1 e
+1d
+#3200
+0d
+#3250
+b10 e
+1d
+#3300
+0d
+#3350
+b11 e
+1d
+#3400
+0d
+#3450
+b100 e
+1d
+#3500
+0d
+#3550
+b0 e
+1d
+#3600
+0d
+#3650
+b1 e
+1d
+#3700
+0d
+#3750
+b10 e
+1d
+#3800
+0d
+#3850
+b11 e
+1d
+#3900
+0d
+#3950
+b100 e
+1d
+#4000
+0d
+#4050
+b0 e
+1d
+#4100
+0d
+#4150
+b1 e
+1d
+#4200
+0d
+#4250
+b10 e
+1d
+#4300
+0d
+#4350
+b11 e
+1d
+#4400
+0d
+#4450
+b100 e
+1d
+#4500
+0d
+#4550
+b0 e
+1d
+#4600
+0d
+#4650
+b1 e
+1d
+#4700
+0d
+#4750
+b10 e
+1d
+#4800
+0d
+#4850
+b11 e
+1d
+#4900
+0d
+#4950
+b100 e
+1d
+#5000
+0d
+#5050
+b0 e
+1d
+#5100
+0d
+#5150
+b1 e
+1d
+#5200
+0d
+#5250
+b10 e
+1d
+#5300
+0d
+#5350
+b11 e
+1d
+#5400
+0d
+#5450
+b100 e
+1d
+#5500
+0d
+#5550
+b0 e
+1d
+#5600
+0d
+#5650
+b1 e
+1d
+#5700
+0d
+#5750
+b10 e
+1d
+#5800
+0d
+#5850
+b11 e
+1d
+#5900
+0d
+#5950
+b100 e
+1d
+#6000
+0d
+#6050
+b0 e
+1d
+#6100
+0d
+#6150
+b1 e
+1d
+#6200
+0d
+#6250
+b10 e
+1d
+#6300
+0d
+#6350
+b11 e
+1d
+#6400
+0d
+#6450
+b100 e
+1d
+#6500
+0d
+#6550
+b0 e
+1d
+#6600
+0d
+#6650
+b1 e
+1d
+#6700
+0d
+#6750
+b10 e
+1d
+#6800
+0d
+#6850
+b11 e
+1d
+#6900
+0d
+#6950
+b100 e
+1d
+#7000
+0d
+#7050
+b0 e
+1d
+#7100
+0d
+#7150
+b1 e
+1d
+#7200
+0d
+#7250
+b10 e
+1d
+#7300
+0d
+#7350
+b11 e
+1d
+#7400
+0d
+#7450
+b100 e
+1d
+#7500
+0d
+#7550
+b0 e
+1d
+#7600
+0d
+#7650
+b1 e
+1d
+#7700
+0d
+#7750
+b10 e
+1d
+#7800
+0d
+#7850
+b11 e
+1d
+#7900
+0d
+#7950
+b100 e
+1d
+#8000
+0d
+#8050
+b0 e
+1d
+#8100
+0d
+#8150
+b1 e
+1d
+#8200
+0d
+#8250
+b10 e
+1d
+#8300
+0d
+#8350
+b11 e
+1d
+#8400
+0d
+#8450
+b100 e
+1d
+#8500
+0d
+#8550
+b0 e
+1d
+#8600
+0d
+#8650
+b1 e
+1d
+#8700
+0d
+#8750
+b10 e
+1d
+#8800
+0d
+#8850
+b11 e
+1d
+#8900
+0d
+#8950
+b100 e
+1d
+#9000
+0d
+#9050
+b0 e
+1d
+#9100
+0d
+#9150
+b1 e
+1d
+#9200
+0d
+#9250
+b10 e
+1d
+#9300
+0d
+#9350
+b11 e
+1d
+#9400
+0d
+#9450
+b100 e
+1d
+#9500
+0d
+#9550
+b0 e
+1d
+#9600
+0d
+#9650
+b1 e
+1d
+#9700
+0d
+#9750
+b10 e
+1d
+#9800
+0d
+#9850
+b11 e
+1d
+#9900
+0d
+#9950
+b100 e
+1d
+#10000
+0d
